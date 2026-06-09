@@ -153,23 +153,24 @@ Backend starts on `http://localhost:8080`
 
 ### 🔐 Login Page
 <p align="center">
-  <img src="frontend/images/login.png" alt="Login" width="700" style="border-radius: 12px; border: 2px solid #2563eb; box-shadow: 0 4px 20px rgba(37,99,235,0.3)"/>
+  <img src="frontend/images/login.png" alt="Login" width="400"/>
 </p>
 
 ### 📝 Register Page
 <p align="center">
-  <img src="frontend/images/register.png" alt="Register" width="700" style="border-radius: 12px; border: 2px solid #2563eb; box-shadow: 0 4px 20px rgba(37,99,235,0.3)"/>
+  <img src="frontend/images/register.png" alt="Register" width="400"/>
 </p>
 
 ### 🏠 Dashboard
 <p align="center">
-  <img src="frontend/images/dashboard.png" alt="Dashboard" width="700" style="border-radius: 12px; border: 2px solid #2563eb; box-shadow: 0 4px 20px rgba(37,99,235,0.3)"/>
+  <img src="frontend/images/dashboard.png" alt="Dashboard" width="400"/>
 </p>
 
 ### 👥 Group Details
 <p align="center">
-  <img src="frontend/images/group.png" alt="Group" width="700" style="border-radius: 12px; border: 2px solid #2563eb; box-shadow: 0 4px 20px rgba(37,99,235,0.3)"/>
+  <img src="frontend/images/group.png" alt="Group" width="400"/>
 </p>
+
 ## 👨‍💻 Author
 
 **Saurav Kumar**
