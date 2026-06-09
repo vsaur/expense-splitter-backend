@@ -149,27 +149,27 @@ Backend starts on `http://localhost:8080`
 | Frontend | HTML5, CSS3, JavaScript |
 
 ---
-
 ## 📸 Screenshots
 
 ### 🔐 Login Page
-
-![Login](frontend/images/login.png)
+<p align="center">
+  <img src="frontend/images/login.png" alt="Login" width="700" style="border-radius: 12px; border: 2px solid #2563eb; box-shadow: 0 4px 20px rgba(37,99,235,0.3)"/>
+</p>
 
 ### 📝 Register Page
-
-![Register](frontend/images/register.png)
+<p align="center">
+  <img src="frontend/images/register.png" alt="Register" width="700" style="border-radius: 12px; border: 2px solid #2563eb; box-shadow: 0 4px 20px rgba(37,99,235,0.3)"/>
+</p>
 
 ### 🏠 Dashboard
-
-![Dashboard](frontend/images/dashboard.png)
+<p align="center">
+  <img src="frontend/images/dashboard.png" alt="Dashboard" width="700" style="border-radius: 12px; border: 2px solid #2563eb; box-shadow: 0 4px 20px rgba(37,99,235,0.3)"/>
+</p>
 
 ### 👥 Group Details
-
-![Group](frontend/images/group.png)
-
----
-
+<p align="center">
+  <img src="frontend/images/group.png" alt="Group" width="700" style="border-radius: 12px; border: 2px solid #2563eb; box-shadow: 0 4px 20px rgba(37,99,235,0.3)"/>
+</p>
 ## 👨‍💻 Author
 
 **Saurav Kumar**
