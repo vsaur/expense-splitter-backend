@@ -21,6 +21,51 @@ Users can create groups, add expenses, and the system automatically calculates w
 
 ## 📄 File Overview
 
+### 🔧 Backend
+
+| File | Description |
+|------|-------------|
+| `src/main/java/.../controller/AuthController.java` | REST endpoints for register and login |
+| `src/main/java/.../controller/GroupController.java` | REST endpoints for group management |
+| `src/main/java/.../controller/ExpenseController.java` | REST endpoints for expense management |
+| `src/main/java/.../controller/SettlementController.java` | REST endpoints for settlements |
+| `src/main/java/.../service/UserService.java` | Business logic for auth — register, login |
+| `src/main/java/.../service/GroupService.java` | Business logic for groups and members |
+| `src/main/java/.../service/ExpenseService.java` | Business logic for expenses and splits |
+| `src/main/java/.../service/SettlementService.java` | Business logic for settlement calculation |
+| `src/main/java/.../repository/UserRepository.java` | Database queries for users |
+| `src/main/java/.../repository/GroupRepository.java` | Database queries for groups |
+| `src/main/java/.../repository/GroupMemberRepository.java` | Database queries for group members |
+| `src/main/java/.../repository/ExpenseRepository.java` | Database queries for expenses |
+| `src/main/java/.../repository/ExpenseSplitRepository.java` | Database queries for expense splits |
+| `src/main/java/.../model/User.java` | User entity — maps to users table |
+| `src/main/java/.../model/Group.java` | Group entity — maps to expense_groups table |
+| `src/main/java/.../model/GroupMember.java` | GroupMember entity — maps to group_members table |
+| `src/main/java/.../model/Expense.java` | Expense entity — maps to expenses table |
+| `src/main/java/.../model/ExpenseSplit.java` | ExpenseSplit entity — maps to expense_splits table |
+| `src/main/java/.../security/JwtUtil.java` | Generates and validates JWT tokens |
+| `src/main/java/.../security/JwtAuthenticationFilter.java` | Intercepts every request and verifies token |
+| `src/main/java/.../security/SecurityConfig.java` | Spring Security rules and configuration |
+| `src/main/java/.../security/PasswordConfig.java` | BCrypt password encoder configuration |
+| `src/main/java/.../exception/GlobalExceptionHandler.java` | Catches all exceptions and returns clean errors |
+| `src/main/java/.../exception/ResourceNotFoundException.java` | Thrown when a resource is not found — 404 |
+| `src/main/java/.../exception/EmailAlreadyExistsException.java` | Thrown when email is already registered — 409 |
+| `src/main/java/.../exception/UnauthorizedException.java` | Thrown when action is not permitted — 403 |
+| `src/main/java/.../dto/request/RegisterRequest.java` | DTO for incoming register data |
+| `src/main/java/.../dto/request/LoginRequest.java` | DTO for incoming login data |
+| `src/main/java/.../dto/request/CreateGroupRequest.java` | DTO for incoming create group data |
+| `src/main/java/.../dto/request/AddMemberRequest.java` | DTO for incoming add member data |
+| `src/main/java/.../dto/request/AddExpenseRequest.java` | DTO for incoming add expense data |
+| `src/main/java/.../dto/response/AuthResponse.java` | DTO for returning JWT token |
+| `src/main/java/.../dto/response/UserResponse.java` | DTO for returning user data — no password |
+| `src/main/java/.../dto/response/GroupResponse.java` | DTO for returning group data |
+| `src/main/java/.../dto/response/ExpenseResponse.java` | DTO for returning expense data |
+| `src/main/java/.../dto/response/SplitResponse.java` | DTO for returning split and settlement data |
+| `src/main/resources/application.properties` | App configuration — database, Redis, JWT |
+| `pom.xml` | Maven dependencies and project configuration |
+
+### 🌐 Frontend
+
 | File | Description |
 |------|-------------|
 | `frontend/index.html` | Login page for existing users |
@@ -32,8 +77,6 @@ Users can create groups, add expenses, and the system automatically calculates w
 | `frontend/js/auth.js` | Login and register page logic |
 | `frontend/js/dashboard.js` | Dashboard page logic |
 | `frontend/js/group.js` | Group details page logic |
-| `src/` | Java Spring Boot backend source code |
-| `pom.xml` | Maven dependencies and project configuration |
 
 ---
 
