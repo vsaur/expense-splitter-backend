@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Splitter - Group</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a href="dashboard.html" class="back-btn">← Back</a>
+    <h1 class="logo" id="group-name">Group</h1>
+    <div></div>
+</nav>
+
+<div class="main-container">
+
+    <!-- Members Section -->
+    <div class="card mb">
+        <div class="section-header">
+            <h3>Members</h3>
+            <button class="btn btn-small" onclick="toggleMemberForm()">+ Add Member</button>
+        </div>
+        <div id="add-member-form" class="hidden mt">
+            <div class="inline-form">
+                <input type="email" id="member-email" placeholder="member@email.com">
+                <button class="btn btn-primary btn-small" onclick="addMember()">Add</button>
+            </div>
+        </div>
+        <div id="members-list" class="mt"></div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab('expenses', this)">Expenses</button>
+        <button class="tab" onclick="switchTab('settlements', this)">Settlements</button>
+    </div>
+
+    <!-- Expenses Tab -->
+    <div id="expenses-tab">
+        <div class="section-header mt">
+            <h3>Expenses</h3>
+            <button class="btn btn-primary btn-small" onclick="toggleExpenseForm()">+ Add Expense</button>
+        </div>
+
+        <div id="add-expense-form" class="card hidden mt">
+            <div class="form-group">
+                <label>Description</label>
+                <input type="text" id="exp-desc" placeholder="Hotel booking">
+            </div>
+            <div class="form-group">
+                <label>Amount (₹)</label>
+                <input type="number" id="exp-amount" placeholder="900">
+            </div>
+            <div class="form-group">
+                <label>Paid By (User ID)</label>
+                <input type="number" id="exp-paidby" placeholder="1">
+            </div>
+            <div class="form-group">
+                <label>Split Among (User IDs comma separated)</label>
+                <input type="text" id="exp-split" placeholder="1,2,3">
+            </div>
+            <button class="btn btn-primary" onclick="addExpense()">Add Expense</button>
+            <button class="btn btn-secondary" onclick="toggleExpenseForm()">Cancel</button>
+        </div>
+
+        <div id="expenses-list" class="mt"></div>
+    </div>
+
+    <!-- Settlements Tab -->
+    <div id="settlements-tab" class="hidden">
+        <h3 class="mt">Outstanding Settlements</h3>
+        <div id="settlements-list" class="mt"></div>
+    </div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/group.js"></script>
+</body>
+</html>

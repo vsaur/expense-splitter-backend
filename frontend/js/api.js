@@ -8,14 +8,14 @@ const headers = () => ({
 })
 
 // Auth
-export const registerUser = (data) =>
+const registerUser = (data) =>
     fetch(`${BASE_URL}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     }).then(res => res.json())
 
-export const loginUser = (data) =>
+const loginUser = (data) =>
     fetch(`${BASE_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -23,24 +23,24 @@ export const loginUser = (data) =>
     }).then(res => res.json())
 
 // Groups
-export const createGroup = (data) =>
+const createGroup = (data) =>
     fetch(`${BASE_URL}/groups`, {
         method: 'POST',
         headers: headers(),
         body: JSON.stringify(data)
     }).then(res => res.json())
 
-export const getMyGroups = () =>
+const getMyGroups = () =>
     fetch(`${BASE_URL}/groups/my`, {
         headers: headers()
     }).then(res => res.json())
 
-export const getGroupById = (groupId) =>
+const getGroupById = (groupId) =>
     fetch(`${BASE_URL}/groups/${groupId}`, {
         headers: headers()
     }).then(res => res.json())
 
-export const addMember = (groupId, data) =>
+const addMemberApi = (groupId, data) =>
     fetch(`${BASE_URL}/groups/${groupId}/members`, {
         method: 'POST',
         headers: headers(),
@@ -48,25 +48,25 @@ export const addMember = (groupId, data) =>
     }).then(res => res.json())
 
 // Expenses
-export const addExpense = (groupId, data) =>
+const addExpenseApi = (groupId, data) =>
     fetch(`${BASE_URL}/groups/${groupId}/expenses`, {
         method: 'POST',
         headers: headers(),
         body: JSON.stringify(data)
     }).then(res => res.json())
 
-export const getGroupExpenses = (groupId) =>
+const getGroupExpenses = (groupId) =>
     fetch(`${BASE_URL}/groups/${groupId}/expenses`, {
         headers: headers()
     }).then(res => res.json())
 
 // Settlements
-export const getSettlements = (groupId) =>
+const getSettlements = (groupId) =>
     fetch(`${BASE_URL}/settlements/group/${groupId}`, {
         headers: headers()
     }).then(res => res.json())
 
-export const settleUp = (splitId) =>
+const settleUpApi = (splitId) =>
     fetch(`${BASE_URL}/settlements/settle/${splitId}`, {
         method: 'PUT',
         headers: headers()

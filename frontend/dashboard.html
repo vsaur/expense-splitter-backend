@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Splitter - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <h1 class="logo">💰 Expense Splitter</h1>
+    <button class="btn btn-danger" onclick="logout()">Logout</button>
+</nav>
+
+<div class="main-container">
+    <div class="page-header">
+        <h2>My Groups</h2>
+        <button class="btn btn-primary" onclick="toggleForm()">+ New Group</button>
+    </div>
+
+    <div id="create-form" class="card hidden">
+        <h3>Create New Group</h3>
+        <div class="form-group">
+            <label>Group Name</label>
+            <input type="text" id="group-name" placeholder="Goa Trip">
+        </div>
+        <div class="form-group">
+            <label>Description (optional)</label>
+            <input type="text" id="group-desc" placeholder="Trip expenses for Goa">
+        </div>
+        <button class="btn btn-primary" onclick="handleCreateGroup()">Create Group</button>
+        <button class="btn btn-secondary" onclick="toggleForm()">Cancel</button>
+    </div>
+
+    <div id="error-msg" class="error hidden"></div>
+    <div id="groups-container"></div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
