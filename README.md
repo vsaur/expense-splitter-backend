@@ -4,6 +4,10 @@ A full stack expense splitting application similar to Splitwise — built with J
 
 Users can create groups, add expenses, and the system automatically calculates who owes whom and minimizes settlement transactions.
 
+🔗 **Live Demo:** [chimerical-dusk-b4b5f4.netlify.app](https://chimerical-dusk-b4b5f4.netlify.app)
+🔧 **Backend API:** [expense-splitter-backend-production-9309.up.railway.app](https://expense-splitter-backend-production-9309.up.railway.app)
+
+---
 ---
 
 ## 🚀 Features
@@ -173,7 +177,5 @@ Backend starts on `http://localhost:8080`
 
 ## 👨‍💻 Author
 
-**Saurav Kumar**
-- GitHub: [@vsaur](https://github.com/vsaur)
-- LinkedIn: [linkedin.com/in/saurav-kumar-05bb65248](https://linkedin.com/in/saurav-kumar-05bb65248)
-- Email: isaurav2001@gmail.com
+
+---
